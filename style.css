@@ -1,61 +1,112 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #eef8fa;
     margin: 0;
     padding: 0;
 }
 .container{
+    text-align: left;
     width: 80%;
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
     background-color: white;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-h1{
+#tache{
     text-align: center;
-    color: #333;
+    margin-top: 0;
+    color: #777777;
+    border-bottom: 1px solid gray;
 }
-input{
+.element-tache{
+    display: flex;
+}
+#talk-input{
     width: 70%;
     padding: 10px;
     margin-right: 10px;
     border: 2px solid #ddd;
     border-radius: 4px;
 }
-button{
-    padding: 10px 20 px;
+#temps{
+    width: 70%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Gestion de la liste de taches */
+#add-tlk-btn{
+    padding: 10px ;
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 18px;
     cursor: pointer;
 }
-button:hover{
+#add-tlk-btn:hover{
     background-color: #45a049;
 }
-ul{
+#talk-list{
     list-style-type: none;
     padding: 0;
+    margin-bottom: -20px;
 }
-li{
-    background-color: #9ca090;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 4px;
+.point {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    background: #f6fffa;
+    border: 1.5px solid #b2dfdb;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(76,175,80,0.07);
+    padding: 12px 18px;
+    margin: 8px 0;
+    transition: box-shadow 0.2s;
+    gap: 10px;
 }
-li button{
+
+.point:hover {
+    box-shadow: 0 4px 12px rgba(76,175,80,0.15);
+}
+
+.tache-titre {
+    color: #205C3B;
+    font-weight: 600;
+    font-size: 1.1em;
+    flex: 2;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tache-temps {
+    color: #388e3c;
+    background: #e8f5e9;
+    border-radius: 6px;
+    padding: 4px 10px;
+    font-size: 0.95em;
+    margin: 0 10px;
+    flex: 1;
+    text-align: center;
+}
+
+.point button {
     background-color: #f44336;
+    color: #fff;
     border: none;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 0.95em;
     cursor: pointer;
+    transition: background 0.2s;
+    flex: 0;
 }
-li button:hover{
-    background-color:#e53935 ;
+
+.point button:hover {
+    background: #b71c1c;
 }
